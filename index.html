@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🌦️ Weather Prediction System</h1>
+            <p>Check current weather and 7-day forecast</p>
+        </header>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                value="Chennai"
+            >
+            <button onclick="searchWeather()">🔍 Search</button>
+            <button onclick="getLocation()">📍 My Location</button>
+        </div>
+
+        <p id="error"></p>
+
+        <div id="loading">
+            Loading weather...
+        </div>
+
+        <section id="weatherSection">
+
+            <div class="current-weather">
+
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+
+                <div>
+                    <h2 id="cityName">Chennai</h2>
+                    <p id="weatherDescription">Clear Sky</p>
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span>°C
+                </div>
+
+            </div>
+
+            <div class="weather-cards">
+
+                <div class="card">
+                    <span>🌡️</span>
+                    <h3>Feels Like</h3>
+                    <p><span id="feelsLike">--</span>°C</p>
+                </div>
+
+                <div class="card">
+                    <span>💧</span>
+                    <h3>Humidity</h3>
+                    <p><span id="humidity">--</span>%</p>
+                </div>
+
+                <div class="card">
+                    <span>💨</span>
+                    <h3>Wind Speed</h3>
+                    <p><span id="windSpeed">--</span> km/h</p>
+                </div>
+
+                <div class="card">
+                    <span>🌧️</span>
+                    <h3>Rain Chance</h3>
+                    <p><span id="rainChance">--</span>%</p>
+                </div>
+
+            </div>
+
+            <div class="forecast-container">
+
+                <h2>📅 7-Day Weather Forecast</h2>
+
+                <div id="forecast" class="forecast"></div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Weather Prediction System | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
